@@ -13,6 +13,7 @@ public class TaskController {
     private TaskService taskService;
 
     @GET
+    @Path("/listar")
     @Produces(value = MediaType.APPLICATION_JSON)
     public Response listarTasks() {
         return Response.ok(taskService.listar()).build();
